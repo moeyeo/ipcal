@@ -19,11 +19,9 @@ function getResult(){
   var binaryId = convertToBinaryIP(ip);
   var intId = parseInt(binaryId,2);
   var hexId = parseInt(binaryId,2).toString(16).toUpperCase();
-  console.log(ip);
   var ip2 = ip;
-  console.log(ip2);
+
    document.getElementById("ip2").innerHTML=ip2;
-   //document.getElementById("subnet").innerHTML=subnet;
    document.getElementById("network_address").innerHTML=network_address;
    document.getElementById("broadcast_address").innerHTML=broadcast_address;
    document.getElementById("useable").innerHTML=useable;
@@ -37,7 +35,14 @@ function getResult(){
    document.getElementById("binaryId").innerHTML=binaryId;
    document.getElementById("intId").innerHTML=intId;
    document.getElementById("hexId").innerHTML=hexId;
-   document.getElementById("result").className="visible";
+   if(ip!="" & subnet!=""){
+     document.getElementById("result").className="visible";
+     document.getElementById("alert").className="alert alert-info hidden"
+    }
+    else{
+        document.getElementById("alert").className="alert alert-info visible"
+        document.getElementById("result").className="hidden";
+    }
 }
 
 

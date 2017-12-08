@@ -9,20 +9,23 @@
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
+    border: 1px solid black;
     margin: 0 auto;
+
 }
 
 td, th {
-    border: 1px solid #dddddd;
     text-align: center;
-    padding: 8px;
+    padding: 5px;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #C7DADC;
 }
+
 
 .box {
   padding-top: 3cm;
   text-align: center;
+  padding-bottom: 3cm;
 }
